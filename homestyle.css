@@ -1,0 +1,153 @@
+:root {
+    background-color: aquamarine;
+    font-size: 62.5%;
+
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: deeppink;
+}
+
+h1,
+h2,
+h3,
+h1 {
+    font-size: 5.4rem;
+    color: deeppink;
+    margin-bottom: 5rem;
+}
+h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
+    
+}
+h2 {
+    margin-bottom: 4rem;
+    font-size: 4.2rem;
+    font-weight: 700;
+}
+h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+/*Utilities for the app*/
+.container
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    max-width: 80rem;
+
+}
+.container > * {
+    width: 100%;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
+}
+.text-center {
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+
+/*buttons for the app*/
+.button {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    text-align: center;
+    width: 20rem;
+    margin-bottom: 1rem;
+    border: 0.1rem solid #244d70;
+    text-decoration: none;
+    color: #244d70;
+    background-color: blanchedalmond;
+}
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+.button[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+.slideshow{
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.middle{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transform: translate(-50%,-50%);
+}
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+.bar{
+    width: 50;
+    height: 10;
+    border: 2px solid #cfd7df;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.bar:hover{
+    background: #244d70;
+}
+input[name="rad"]{
+    position: absolute;
+    visibility: hidden;
+}
+.slides{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.slide{
+    width: 20%;
+    transition: 0.5s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+#rad1:checked ~ .a{
+    margin-left: 0;
+}
+#rad2:checked ~ .a{
+    margin-left: 20%;
+}
+#rad3:checked ~ .a{
+    margin-left: 40%;
+}
+@media (max-width: 584px) {
+    .container{
+        max-width: 700px;
+    }
+}
