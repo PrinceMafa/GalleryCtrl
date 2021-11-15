@@ -7,9 +7,11 @@ const name = document.getElementById("name");
 const surnname = document.getElementById("surname");
 const username = document.getElementById("username");
 const phone = document.getElementById("phonenumber");
+const email = document.getElementById("email");
 const passwod1 = document.getElementById("passwordSign");
 const passwod2 = document.getElementById("passwordComfirm");
 
+var regularEmail = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/;
 function validation()
 {
     if(username=="admin" && password == "user")
@@ -19,6 +21,30 @@ function validation()
     }
     else
     {
-        //
+        if(email.match(regularEmail))
+        {
+            if (document.getElementById("dot1").checked || document.getElementById("dot2").checked || document.getElementById("dot3"))
+            {
+                if (phone.length == 10)
+                {
+                    if(passwod1==passwod2)
+                    {
+                        
+                    }
+                }
+                else
+                {
+                    alert("phone number must be 10 digits in length!");
+                }
+            }
+            else
+            {
+                alert("Please select your gender");
+            }
+        }
+        else
+        {
+            alert("Invalid email address")
+        }
     }
 }
