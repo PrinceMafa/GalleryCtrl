@@ -7,34 +7,26 @@
     <title>SignUp</title>
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" >  
-        function InsertRecord()  
-        { 
-            
-            if (1)  
-            {  
-                
-            }  
-            else  
-            {              
-                alert("Please Enter Employee \n Id \n Name \n Salary \n City ");  
-            }  
-        }  
-        function ShowAll()  
-        {  
-                
-                while (1)  
-                {  
-                    
-                }
-            }   
-    </script>  
-    </head>style type="text/css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <style>
+        #footer {
+            position: fixed;
+            padding: 10px 10px 0px 10px;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background: whitesmoke;
+        }
+    </style>
 </head>
 <body>
     <div class="container1">
         <form onsubmit="return validation()" action="/loginpage.html" method="post">
             <div class="User-Information">
+                <span class="border border-info"></span>
                 <div class="input-box">
                     <span class="details">Full name(s)</span>
                     <input type="text" placeholder="Enter your name" id="name" required>
@@ -85,8 +77,9 @@
                 </div>
             </div>
             <div class="button">
-                <input type="submit" value="Sign Up">
+                <input type="submit" onclick="window.location.href='/loginpage.html'" value="Sign Up">
             </div>
+            <div id="footer">Community content copyright (c) 1999-2008, North-West University, South Africa. All rights reserved.</div>
         </form>
     </div>
 </body>

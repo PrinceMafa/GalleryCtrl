@@ -1,3 +1,12 @@
+$("#btn-save").click( function() {
+    event.preventDefault();
+    var text = $("#textarea").val();
+    var filename = $("#input-fileName").val()
+    var blob = new Blob([text], {type: "text/plain;charset=utf-8"});
+    saveAs(blob, filename+".txt");
+  });
+  
+
 //form1 is for the signup, form2 is for the loginpage
 const form = document.getElementById("form");
 const form = document.getElementById("form");
@@ -29,7 +38,7 @@ function validation()
                 {
                     if(passwod1==passwod2)
                     {
-                        
+                        alert("Success!!!");
                     }
                 }
                 else

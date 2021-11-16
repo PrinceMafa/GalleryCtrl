@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>Share & Download</h1>
+      <div class="form-group">
+        <label for="input-fileName">File name</label>
+        <input type="text" class="form-control" id="input-fileName" value="textFile" placeholder="Enter file name">
+      </div>
+      <div class="form-group">
+        <label for="textarea">Text</label>
+        <textarea id="textarea" class="form-control" rows="10" placeholder="Enter text to save">Prince</textarea>
+      </div>
+      <button class="btn"><i class="fa fa-download"></i> Download</button>
+    </div>
+    <div class="col-sm-6">
+      <h2>Upload content</h2>
+      <button type="button">
+      <label for="inputId">choose a file to Upload</label>
+      <input id="inputId" type="file" style="position: fixed; top: -100em">
+      </button>
+    </div>
+    <div class="col-sm-6">
+        <h2>Timeline</h2>
+        <img src="images/image3.jpg" width="145" height="126" alt="Planets" usemap="#planetmap">
+
+        <map name="planetmap">
+          <area shape="rect" coords="0,0,82,126" alt="Sun" href="info_about_the_sun.htm" download="sun">
+          <area shape="circle" coords="90,58,3" alt="Mercury" href="merglobe.gif" download="mercury">
+          <area shape="circle" coords="124,58,8" alt="Venus" href="information_about_the_planet_venus.txt" download="venus">
+        </map> 
+      </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
